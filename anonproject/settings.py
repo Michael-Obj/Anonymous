@@ -88,20 +88,20 @@ WSGI_APPLICATION = 'anonproject.wsgi.application'
 #     }
 # }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'Anonymous',
-#         'USER': os.getenv("USER"),
-#         'PASSWORD': os.getenv("PASSWORD"),
-#         'HOST': 'localhost',
-#         'PORT': os.getenv("PORT"),
-#     }
-# }
-
 DATABASES = {
-    'default': dj_database_url.parse('postgres://anonymous_m4y7_user:IKaVmS9wcMlRPpZSnxsJXCTFwAmYTSOG@dpg-col5pnud3nmc739qqpig-a.oregon-postgres.render.com/anonymous_m4y7')
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'Anonymous',
+        'USER': os.getenv("USER"),
+        'PASSWORD': os.getenv("PASSWORD"),
+        'HOST': 'localhost',
+        'PORT': os.getenv("PORT"),
+    }
 }
+
+# DATABASES = {
+#     'default': dj_database_url.parse('postgres://anonymous_m4y7_user:IKaVmS9wcMlRPpZSnxsJXCTFwAmYTSOG@dpg-col5pnud3nmc739qqpig-a.oregon-postgres.render.com/anonymous_m4y7')
+# }
 
 
 # Password validation
